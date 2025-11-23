@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaArchive | 첫 번째 자바 프로그램</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/lesson.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">홈</a>
+            <a href="lessons.html" class="selected">학습</a>
+            <a href="playground.html">코드 실습</a>
+        </nav>
+    </header>
+
+    <!-- LESSON LAYOUT -->
+    <main class="lesson-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="lesson-sidebar">
+            <h3>자바 기초 커리큘럼</h3>
+
+            <ul>
+                <li><a href="lessons.html" class="selected"><span class="cur-num">01.</span> 첫 번째 자바 프로그램</a></li>
+
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">02.</span> println과 문자열 출력</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">03.</span> 변수와 타입</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">04.</span> 조건문 if/else</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">05.</span> 반복문</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">06.</span> 메서드 만들기</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">07.</span> 클래스 구조 이해</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">08.</span> 객체 생성과 활용</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">09.</span> 배열</a></li>
+                <li><a href="lessons-locked.html" class="locked"><span class="cur-num">10.</span> 입력과 출력</a></li>
+            </ul>
+        </aside>
+
+
+        <!-- RIGHT CONTENT -->
+        <section class="lesson-content">
+
+            <h1>01. 첫 번째 자바 프로그램</h1>
+
+            <p>
+                자바(Java)는 모든 프로그램이 반드시 <b>main 메서드</b>에서 시작됩니다.
+                즉, 컴퓨터가 프로그램을 실행할 때 가장 먼저 들어오는 문이 바로 <code>main()</code>이라고 생각하면 됩니다.
+            </p>
+
+            <h2>자바 프로그램의 기본 구조</h2>
+
+            <p>가장 기본적인 형태는 아래와 같습니다:</p>
+
+            <pre class="code-block"><code>public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Java");
+    }
+}</code></pre>
+
+            <p>
+                지금은 이 구조를 모두 이해하려고 애쓰지 않아도 됩니다.
+                <b>“코드는 이 네모 안에 들어간다”</b> 정도만 기억해도 충분합니다.
+            </p>
+
+            <ul>
+                <li><code>public class Main { ... }</code> → 프로그램의 기본 틀, 'Main'이라는 이름의 클래스</li>
+                <li><code>public static void main(String[] args)</code> → 프로그램의 시작 지점</li>
+                <li><code>System.out.println()</code> → 콘솔(출력창)에 글자를 표시하는 코드</li>
+            </ul>
+
+            <h2>오늘의 목표</h2>
+
+            <p>
+                자바의 첫 번째 목표는 “내가 원하는 문장을 화면에 출력하는 것”입니다.
+                이것만 할 수 있어도 자바의 절반은 이해한 셈입니다!
+            </p>
+
+            <h2>미션</h2>
+
+            <div class="mission-box">
+                <p>🔶 <b>미션 1</b> — "Hello Java" 문장을 너만의 문장으로 바꿔보세요.</p>
+                <p>🔶 <b>미션 2</b> — <code>System.out.println()</code>을 한 줄 더 추가해서 두 줄을 출력하세요.</p>
+            </div>
+
+            <button class="btn primary" id="insert-template">기본 코드 불러오기</button>
+
+            <textarea class="code-editor" id="lesson-editor">
+// 아래에 미션을 해결해보세요!
+      </textarea>
+
+            <button class="btn primary" id="run-code">실행하기</button>
+
+            <div class="output" id="output-box">
+                출력 결과가 여기에 표시됩니다.
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+    // 2~10강 클릭 시 잠금 알림
+    document.querySelectorAll(".locked").forEach(el => {
+      el.addEventListener("click", e => {
+        e.preventDefault();
+        alert("이 강좌는 아직 오픈되지 않았습니다!");
+      });
+    });
+</script>
+
+</body>
+</html>
