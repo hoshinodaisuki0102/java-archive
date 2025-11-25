@@ -1,0 +1,166 @@
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 24px;
+  padding: 28px 26px;
+  background: radial-gradient(circle at top left, #FFFFFF, #E4ECFF);
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
+  margin-bottom: 28px;
+}
+
+.hero-left h1 {
+  font-size: 32px;
+  line-height: 1.3;
+  margin: 10px 0 12px;
+}
+
+.hero-left p {
+  color: #444;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(76,126,255,0.1);
+  color: #4C7EFF;
+}
+
+.hero-panel {
+  background: #111827;
+  color: #E5E7EB;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font-family: "JetBrains Mono","Fira Code",monospace;
+  font-size: 13px;
+  box-shadow: 0 18px 40px rgba(15,23,42,0.7);
+  overflow: auto;
+}
+
+.hero-panel pre {
+  white-space: pre;
+}
+
+/* ===========================
+   HOME SECTIONS
+=========================== */
+.home-section {
+  margin-top: 26px;
+  padding: 22px 22px 24px;
+  background: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.06);
+}
+
+.home-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.home-section p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* Java란? */
+.home-java-intro .home-section-header {
+  margin-bottom: 18px;
+}
+
+.section-tag {
+  display: inline-flex;
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: #FDECE1;
+  color: #FF7F3F;
+  margin-bottom: 6px;
+}
+
+.highlight-list {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.highlight-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.highlight-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FF7F3F;
+}
+
+.intro-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  border-top: 1px dashed #E3E6FF;
+  padding-top: 10px;
+  margin-top: 8px;
+}
+
+.intro-cta p {
+  font-size: 13px;
+  color: #555;
+}
+
+.card-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 14px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 4px 18px rgba(15,23,42,0.06);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(15,23,42,0.12);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #4C7EFF;
+}

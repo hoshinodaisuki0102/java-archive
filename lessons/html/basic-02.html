@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본기 2강 — println 완전 정복</title>
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <script type="module" src="../assets/js/lessons/basic-02.js"></script>
+</head>
+<body>
+<div class="app">
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="../index.html">홈</a>
+            <a href="../curriculum.html">강의 선택</a>
+            <a href="../playground.html">연습장</a>
+        </nav>
+    </header>
+
+    <main class="lesson-layout">
+        <aside class="lesson-sidebar">
+            <h3>기본기 강의</h3>
+            <ul>
+                <li><a href="basic-01.html">01. 프로그래밍이란?</a></li>
+                <li><a class="selected" href="basic-02.html">02. println 완전 정복</a></li>
+                <li><a href="basic-03.html">03. 여러 줄 출력과 주석</a></li>
+            </ul>
+        </aside>
+
+        <section class="lesson-content">
+
+            <h1>기본기 2강 — println 완전 정복</h1>
+
+            <p>
+                1강에서 <code>System.out.println("Hello Java");</code> 한 줄을 사용해 보았습니다.
+                이제 이 한 줄을 이루는 요소를 조금 더 천천히 뜯어서 살펴보겠습니다.
+            </p>
+
+            <h2>세미콜론(;)은 왜 붙을까?</h2>
+
+            <p>
+                자바에서는 <strong>한 줄짜리 명령의 끝에 세미콜론(;)을 붙여야 합니다.</strong>
+                세미콜론은 “여기까지가 한 문장이다”라는 표시입니다.
+                한국어에서 마침표 역할과 비슷합니다.
+            </p>
+
+            <div class="example-panel">
+                <div class="example-code">
+                    <div class="code-block">
+                        System.out.println("Hello");
+                        System.out.println("Java");
+                    </div>
+                </div>
+                <div class="example-output">
+                    <div class="example-output-label">실행 결과</div>
+                    <div class="example-output-body">
+                        Hello
+                        Java
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                만약 세미콜론을 빼먹으면 자바는 “문장이 어디에서 끝나는지” 알지 못해
+                <strong>문법 오류(compile error)</strong>를 내게 됩니다.
+            </p>
+
+            <h2>괄호와 큰따옴표</h2>
+
+            <p>
+                <code>println</code> 뒤의 괄호와 큰따옴표도 중요합니다.
+            </p>
+
+            <ul>
+                <li><strong>괄호 ( )</strong> 안에는 “출력할 대상을 넣는다”.</li>
+                <li><strong>문자(글자)를 출력</strong>하고 싶을 때는 큰따옴표 <code>" "</code>로 감싼다.</li>
+            </ul>
+
+            <div class="example-panel">
+                <div class="example-code">
+                    <div class="code-block">
+                        System.out.println("123");
+                        System.out.println(123);
+                    </div>
+                </div>
+                <div class="example-output">
+                    <div class="example-output-label">실행 결과</div>
+                    <div class="example-output-body">
+                        123
+                        123
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                겉보기에는 둘 다 같은 결과가 출력되지만,
+                첫 번째 줄은 “문자열”, 두 번째 줄은 “숫자”라는 점에서 차이가 있습니다.
+                지금은 <strong>글자를 출력할 때는 꼭 큰따옴표로 감싼다</strong> 정도만 기억해 둡시다.
+            </p>
+
+            <h2>println과 print의 차이</h2>
+
+            <p>
+                자바에는 <code>println</code>과 비슷한 친구인 <code>print</code>도 있습니다.
+            </p>
+
+            <div class="example-panel">
+                <div class="example-code">
+                    <div class="code-block">
+                        System.out.print("Hello");
+                        System.out.print("Java");
+                    </div>
+                </div>
+                <div class="example-output">
+                    <div class="example-output-label">실행 결과</div>
+                    <div class="example-output-body">
+                        HelloJava
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <code>print</code>는 출력 후에 줄을 바꾸지 않기 때문에,
+                두 문장이 한 줄에 이어서 붙어 나옵니다.
+                <code>println</code>은 <strong>출력 후 자동으로 줄을 바꾼다</strong>는 점만 기억해 두면 충분합니다.
+            </p>
+
+            <!-- 실습 1 -->
+            <div class="practice-box" id="l2_p1">
+                <h3>실습 1 — 세미콜론 붙여 보기</h3>
+                <div class="mission-box">
+                    아래 두 문장이 모두 제대로 실행되도록 코드를 완성해 보세요.
+                    <pre>// "Java" 한 줄 출력
+System.out.println("Java")
+
+// "Archive" 한 줄 출력
+System.out.println("Archive")</pre>
+                    세미콜론을 포함하여 문법을 완성해 보세요.
+                </div>
+                <textarea id="l2_p1_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l2_p1_run" class="btn primary">실행하기</button>
+                <div id="l2_p1_output" class="output">아직 실행하지 않았습니다.</div>
+            </div>
+
+            <!-- 실습 2 -->
+            <div class="practice-box" id="l2_p2">
+                <h3>실습 2 — print와 println 비교하기</h3>
+                <div class="mission-box">
+                    아래와 같은 실행 결과가 나오도록 코드를 작성해 보세요.
+                    <pre>HelloJava
+Hello
+Java</pre>
+                    힌트: 위의 세 줄은 <code>print</code>와 <code>println</code>을 섞어서 만든 결과입니다.
+                </div>
+                <textarea id="l2_p2_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l2_p2_run" class="btn primary">실행하기</button>
+                <div id="l2_p2_output" class="output">작성한 코드의 출력 결과가 여기에 표시됩니다.</div>
+            </div>
+
+            <!-- 실습 3 -->
+            <div class="practice-box" id="l2_p3">
+                <h3>실습 3 — 나만의 첫 문장 만들기</h3>
+                <div class="mission-box">
+                    <strong>println</strong>을 이용해서 아래와 같이 세 줄을 출력해 보세요.
+                    <pre>나는 자바를 배우고 있다.
+println은 줄을 바꾼다.
+세미콜론은 문장의 마침표다.</pre>
+                </div>
+                <textarea id="l2_p3_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l2_p3_run" class="btn primary">실행하기</button>
+                <div id="l2_p3_output" class="output">아직 실행하지 않았습니다.</div>
+            </div>
+
+            <div class="summary-box">
+                이번 강의에서는 <code>System.out.println</code> 한 줄에 들어 있는 세미콜론, 괄호, 큰따옴표의 의미를
+                자세히 살펴보고, <code>print</code>와 <code>println</code>의 차이도 함께 연습했습니다.
+                출력 명령의 기본 구조를 정확히 알고 있으면 이후에 변수, 조건문, 반복문을 배울 때도
+                “내가 지금 무엇을 화면에 보여 주고 있는지”를 명확하게 파악할 수 있습니다.
+            </div>
+
+        </section>
+    </main>
+</div>
+</body>
+</html>
