@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>기본기 강의 커리큘럼</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+<div class="app">
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">홈</a>
+            <a href="lessons.html">강의</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <h1>기본기 강의 커리큘럼</h1>
+        <p style="margin-top:8px;margin-bottom:20px;color:#444;font-size:14px;">
+            아래 10개의 강의를 순서대로 따라오면 기초 문법을 완전히 이해할 수 있습니다.
+        </p>
+
+        <ul class="curriculum-list-pro">
+            <li><a href="lessons/html/basic-01.html"><span>01</span> 프로그래밍이란?</a></li>
+            <li><a href="lessons/html/basic-02.html" class="locked"><span>02</span> println 완전 이해하기</a></li>
+            <li><a href="lessons/html/basic-03.html" class="locked"><span>03</span> 여러 줄 출력과 주석</a></li>
+            <li><a href="#" class="locked"><span>04</span> 숫자 출력</a></li>
+            <li><a href="#" class="locked"><span>05</span> 변수란?</a></li>
+            <li><a href="#" class="locked"><span>06</span> 자료형 맛보기</a></li>
+            <li><a href="#" class="locked"><span>07</span> 조건문</a></li>
+            <li><a href="#" class="locked"><span>08</span> 반복문</a></li>
+            <li><a href="#" class="locked"><span>09</span> 메서드</a></li>
+            <li><a href="#" class="locked"><span>10</span> 자기소개 프로그램 완성</a></li>
+        </ul>
+    </main>
+
+</div>
+
+<script>
+    document.querySelectorAll(".locked").forEach(item => {
+      item.addEventListener("click", e => {
+        e.preventDefault();
+        alert("아직 오픈되지 않은 강좌입니다!");
+      });
+    });
+</script>
+</body>
+</html>
