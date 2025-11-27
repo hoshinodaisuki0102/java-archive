@@ -1,0 +1,116 @@
+/* =============================
+   COURSE CARD STYLE
+============================= */
+
+.course-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 26px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.course-card.highlight {
+  border-left: 5px solid #ff7f3f;
+  background: #fff7f2;
+}
+
+.course-info h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.course-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.course-info p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  background: #ff7f3f;
+  color: white;
+}
+
+.tag.gray {
+  background: #cccccc;
+}
+
+.progress-row {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+
+  display: flex;
+  gap: 10px;
+}
+
+.btn.big {
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+.curriculum-list-pro {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.curriculum-list-pro li a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+
+  transition: background .15s ease, transform .15s ease;
+}
+
+.curriculum-list-pro li a span {
+  background: #ff7f3f;
+  color: white;
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.curriculum-list-pro li a:hover {
+  background: #fff2eb;
+  transform: translateX(3px);
+}

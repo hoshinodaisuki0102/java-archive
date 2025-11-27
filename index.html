@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaArchive | 자바 언어 학습 아카이브</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <script defer src="assets/js/home.js"></script>
+    <script defer src="assets/js/auth.js"></script>
+</head>
+<body>
+
+<!-- ===========================
+     LEFT SIDE CURRICULUM PANEL
+=========================== -->
+<div id="side-curriculum" class="side-panel">
+    <button id="toggle-panel" class="panel-toggle">▶</button>
+
+    <div class="curriculum-header">
+        <h3>Java 기초 커리큘럼</h3>
+    </div>
+
+    <ul class="curriculum-list">
+        <li><a href="lessons.html"><span class="cur-num">01.</span> 첫 번째 자바 프로그램</a></li>
+        <li><a href="lessons.html"><span class="cur-num">02.</span> println과 문자열 출력</a></li>
+        <li><a href="lessons.html"><span class="cur-num">03.</span> 변수와 타입</a></li>
+        <li><a href="lessons.html"><span class="cur-num">04.</span> 조건문 if/else</a></li>
+        <li><a href="lessons.html"><span class="cur-num">05.</span> 반복문 for/while</a></li>
+        <li><a href="#" class="locked"><span class="cur-num">06.</span> 메서드 만들기</a></li>
+        <li><a href="#" class="locked"><span class="cur-num">07.</span> 클래스 구조 이해</a></li>
+        <li><a href="#" class="locked"><span class="cur-num">08.</span> 객체 생성과 활용</a></li>
+        <li><a href="#" class="locked"><span class="cur-num">09.</span> 배열 기초</a></li>
+        <li><a href="#" class="locked"><span class="cur-num">10.</span> 입력과 출력</a></li>
+    </ul>
+
+</div>
+
+
+<!-- ===========================
+        MAIN APP CONTAINER
+=========================== -->
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="lessons.html">학습</a>
+            <a href="playground.html">코드 실습</a>
+            <a href="quiz.html">퀴즈</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ===========================
+             HERO SECTION (CENTER)
+        ============================ -->
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-tag">자바 기초부터 차근차근</div>
+                <h1>JavaArchive에서<br>자바를 시작하세요.</h1>
+                <p>
+                    기초 문법부터 단계별 실습까지.<br>
+                    짧은 강의와 직접 실행 기능으로 빠르게 성장해보세요.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="lessons.html" class="btn primary">강의 보러가기</a>
+                    <a href="playground.html" class="btn ghost">코드부터 실행하기</a>
+                </div>
+            </div>
+
+            <!-- CODE SLIDER -->
+            <div class="hero-panel slider">
+
+                <!-- 슬라이드 1 -->
+                <div class="slide showing">
+<pre><code>
+<span class="code-keyword">public class</span> <span class="code-class">Main</span> {
+    <span class="code-keyword">public static void</span> <span class="code-method">main</span>(String[] args) {
+        <span class="code-method">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Welcome to JavaArchive 👋"</span>);
+    }
+}
+</code></pre>
+                </div>
+
+                <!-- 슬라이드 2 -->
+                <div class="slide">
+<pre><code>
+<span class="code-keyword">public class</span> <span class="code-class">Calculator</span> {
+
+    <span class="code-keyword">public static int</span> <span class="code-method">add</span>(<span class="code-keyword">int</span> a, <span class="code-keyword">int</span> b) {
+        <span class="code-keyword">return</span> a + b;
+    }
+
+    <span class="code-keyword">public static void</span> <span class="code-method">main</span>(String[] args) {
+        <span class="code-keyword">int</span> result = <span class="code-method">add</span>(<span class="code-number">12</span>, <span class="code-number">30</span>);
+        <span class="code-method">System</span>.out.<span class="code-method">println</span>(result);
+    }
+}
+</code></pre>
+                </div>
+
+                <!-- 슬라이드 3 -->
+                <div class="slide">
+<pre><code>
+<span class="code-keyword">public class</span> <span class="code-class">LoopDemo</span> {
+
+    <span class="code-keyword">public static void</span> <span class="code-method">main</span>(String[] args) {
+
+        <span class="code-keyword">for</span>(<span class="code-keyword">int</span> i = <span class="code-number">1</span>; i &lt;= <span class="code-number">5</span>; i++) {
+            <span class="code-method">System</span>.out.<span class="code-method">println</span>(<span class="code-string">"Hello " </span> + i);
+        }
+
+    }
+}
+</code></pre>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===========================
+            JAVA INTRO SECTION
+        ============================ -->
+        <section class="home-section home-java-intro">
+            <div class="home-section-header">
+                <span class="section-tag">Java란?</span>
+                <h2>Java란 무엇인가요?</h2>
+                <p>
+                    Java는 1995년에 등장한 객체지향 프로그래밍 언어로,
+                    지금도 다양한 분야에서 널리 사용되는 안정적이고 강력한 언어입니다.
+                </p>
+            </div>
+
+            <div class="home-section-body">
+                <ul class="highlight-list">
+                    <li><b>역사</b> — 1995년 Sun Microsystems에서 등장</li>
+                    <li><b>기능</b> — 객체지향, 자동 메모리 관리, JVM 기반 실행</li>
+                    <li><b>쓰임새</b> — 서버, 금융, 안드로이드, 게임 서버 등</li>
+                    <li><b>장점</b> — 안정성, 확장성, 문서 풍부, 대규모 프로젝트에 강함</li>
+                </ul>
+
+                <div class="intro-cta">
+                    <p>더 자세히 알고 싶다면?</p>
+                    <a href="java-intro.html" class="btn intro-btn">Java 자세히 보기 →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===========================
+            FEATURE CARDS
+        ============================ -->
+        <section class="home-section">
+            <h2>JavaArchive에서 할 수 있는 것들</h2>
+
+            <div class="card-grid">
+                <a href="lessons.html" class="card">
+                    <h3>짧은 강의</h3>
+                    <p>핵심만 빠르게 익히는 짧고 명확한 강의 구성</p>
+                    <span class="card-link">강의 보기 →</span>
+                </a>
+
+                <a href="playground.html" class="card">
+                    <h3>코드 실습</h3>
+                    <p>브라우저에서 바로 실행할 수 있는 실습 환경 제공</p>
+                    <span class="card-link">실습 시작 →</span>
+                </a>
+
+                <a href="quiz.html" class="card">
+                    <h3>퀴즈 & 미션</h3>
+                    <p>미션 중심 문제로 실력을 확인해보세요</p>
+                    <span class="card-link">퀴즈 보기 →</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2025 JavaArchive
+    </footer>
+
+</div> <!-- end of .app -->
+
+<script>
+    // locked 강좌 알림
+    document.querySelectorAll(".locked").forEach(el => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        alert("이 강좌는 아직 오픈되지 않았습니다!");
+      });
+    });
+</script>
+
+
+</body>
+</html>

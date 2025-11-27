@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaArchive | 코드 실습</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <script defer src="assets/js/auth.js"></script>
+</head>
+<body>
+<div class="app">
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">홈</a>
+            <a href="lessons.html">학습</a>
+            <a href="quiz.html">퀴즈</a>
+        </nav>
+    </header>
+
+    <main class="playground">
+
+        <h1>온라인 코드 실습</h1>
+        <p class="pg-desc">코드를 입력하고 ‘실행하기’를 눌러보세요. (추후 서버 연동 예정)</p>
+
+        <textarea class="code-editor">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello Java!");
+    }
+}
+      </textarea>
+
+        <button class="run-btn">실행하기</button>
+
+        <div class="output">
+            <h3>출력 결과</h3>
+            <pre>(아직 서버 실행 미구현)</pre>
+        </div>
+
+    </main>
+
+</div>
+</body>
+</html>

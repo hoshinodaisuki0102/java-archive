@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본기 3강 — 여러 줄 출력과 주석</title>
+
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+
+    <script defer src="assets/js/auth.js"></script>
+    <script type="module" src="/lessons/js/basic-03.js"></script>
+</head>
+<body>
+<div class="app">
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="../index.html">홈</a>
+            <a href="../curriculum.html">강의 선택</a>
+            <a href="../playground.html">연습장</a>
+        </nav>
+    </header>
+
+    <main class="lesson-layout">
+        <aside class="lesson-sidebar">
+            <h3>기본기 강의</h3>
+            <ul>
+                <li><a href="basic-01.html">01. 프로그래밍이란?</a></li>
+                <li><a href="basic-02.html">02. println 완전 정복</a></li>
+                <li><a class="selected" href="basic-03.html">03. 여러 줄 출력과 주석</a></li>
+            </ul>
+        </aside>
+
+        <section class="lesson-content">
+
+            <h1>기본기 3강 — 여러 줄 출력과 주석</h1>
+
+            <p>
+                이제 <code>println</code> 사용이 조금 익숙해졌다면, 여러 줄을 깔끔하게 출력하는 방법과
+                코드에 메모를 남기는 <strong>주석(comment)</strong>을 같이 살펴보겠습니다.
+            </p>
+
+            <h2>여러 줄을 출력하는 두 가지 방법</h2>
+
+            <p>
+                여러 줄을 출력하는 가장 단순한 방법은 <strong>println을 여러 번 쓰는 것</strong>입니다.
+            </p>
+
+            <div class="example-panel">
+                <div class="example-code">
+                    <div class="code-block">
+                        System.out.println("첫 번째 줄");
+                        System.out.println("두 번째 줄");
+                        System.out.println("세 번째 줄");
+                    </div>
+                </div>
+                <div class="example-output">
+                    <div class="example-output-label">실행 결과</div>
+                    <div class="example-output-body">
+                        첫 번째 줄
+                        두 번째 줄
+                        세 번째 줄
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                나중에 문자열 안에서 <code>\n</code>이라는 특수 문자를 이용해 한 줄 안에서 줄바꿈을 넣을 수도 있지만,
+                지금 단계에서는 <strong>println을 여러 줄 쓰는 방식</strong>에 먼저 익숙해지는 것이 좋습니다.
+            </p>
+
+            <h2>주석(comment)이란?</h2>
+
+            <p>
+                주석은 <strong>코드에 적는 메모</strong>입니다. 컴퓨터는 주석을 실행하지 않고 무시합니다.
+                사람이 코드를 읽기 쉽도록 설명을 붙이거나, 잠시 코드를 꺼두고 싶을 때 사용합니다.
+            </p>
+
+            <div class="example-panel">
+                <div class="example-code">
+                    <div class="code-block">
+                        // 한 줄 주석의 예
+                        System.out.println("Hello");
+
+                        // TODO: 나중에 다른 문장도 추가하기
+                        System.out.println("Java");
+                    </div>
+                </div>
+                <div class="example-output">
+                    <div class="example-output-label">실행 결과</div>
+                    <div class="example-output-body">
+                        Hello
+                        Java
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                자바에서 주석을 쓰는 방법은 크게 두 가지입니다.
+            </p>
+
+            <ul>
+                <li><code>//</code> 로 시작하면 그 줄의 끝까지가 주석입니다. (한 줄 주석)</li>
+                <li><code>/*</code> 와 <code>*/</code> 사이에 적힌 부분은 전부 주석입니다. (여러 줄 주석)</li>
+            </ul>
+
+            <div class="code-block">
+                /*
+                여러 줄 주석의 예
+                이 안에 있는 내용은 모두 실행되지 않습니다.
+                */
+                System.out.println("주석 연습");
+            </div>
+
+            <!-- 실습 1 -->
+            <div class="practice-box" id="l3_p1">
+                <h3>실습 1 — 여러 줄 자기소개 출력하기</h3>
+                <div class="mission-box">
+                    <strong>println</strong>을 이용해서 아래와 비슷한 형식의 자기소개를 세 줄 이상 출력해 보세요.
+                    <pre>안녕하세요.
+저는 자바를 배우는 중입니다.
+println으로 여러 줄을 연습하고 있습니다.</pre>
+                </div>
+                <textarea id="l3_p1_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l3_p1_run" class="btn primary">실행하기</button>
+                <div id="l3_p1_output" class="output">아직 실행하지 않았습니다.</div>
+            </div>
+
+            <!-- 실습 2 -->
+            <div class="practice-box" id="l3_p2">
+                <h3>실습 2 — 주석으로 코드 설명 달기</h3>
+                <div class="mission-box">
+                    아래 코드는 두 줄을 출력하지만, 무엇을 하는 코드인지 잘 보이지 않습니다.
+                    <strong>한 줄 주석</strong>을 이용해 각 출력 위에 설명을 달아 보세요.
+                    <pre>System.out.println("1 + 2 = 3");
+System.out.println("3 * 4 = 12");</pre>
+                </div>
+                <textarea id="l3_p2_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l3_p2_run" class="btn primary">실행하기</button>
+                <div id="l3_p2_output" class="output">작성한 코드가 여기에서 실행됩니다.</div>
+            </div>
+
+            <!-- 실습 3 -->
+            <div class="practice-box" id="l3_p3">
+                <h3>실습 3 — 코드 잠깐 끄기</h3>
+                <div class="mission-box">
+                    아래 세 줄 중에서 <strong>두 번째 줄만</strong> 실행되지 않도록 만들어 보세요.
+                    여러 줄 주석 또는 한 줄 주석 중 편한 방법을 사용해 보세요.
+                    <pre>System.out.println("첫 번째 줄");
+System.out.println("두 번째 줄(보이면 안 됨)");
+System.out.println("세 번째 줄");</pre>
+                </div>
+                <textarea id="l3_p3_editor" class="code-editor" spellcheck="false"></textarea>
+                <button id="l3_p3_run" class="btn primary">실행하기</button>
+                <div id="l3_p3_output" class="output">아직 실행하지 않았습니다.</div>
+            </div>
+
+            <div class="summary-box">
+                이번 강의에서는 여러 줄을 출력할 때 <code>println</code>을 여러 번 사용하는 방법과,
+                코드에 설명을 붙이는 주석 문법을 연습했습니다.
+                주석을 잘 활용하면 “나중에 내가 다시 봐도 이해할 수 있는 코드”를 만들 수 있고,
+                특정 줄만 잠시 꺼 두고 실험할 때도 매우 유용합니다. 앞으로 작성하는 모든 코드에
+                “미래의 나를 위한 설명”을 남긴다는 마음으로 주석을 붙이는 습관을 들여 봅시다.
+            </div>
+
+        </section>
+    </main>
+</div>
+</body>
+</html>

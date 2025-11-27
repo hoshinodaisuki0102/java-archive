@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 | Java Archive</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Pretendard", sans-serif;
+            background: #F3F6FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-box {
+            width: 420px;
+            background: #FFFFFF;
+            padding: 40px 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(15,23,42,0.08);
+        }
+
+        h1 {
+            color: #FF7F3F;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .desc {
+            text-align: center;
+            color: #666;
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+
+        .group {
+            margin-bottom: 18px;
+        }
+
+        .group label {
+            font-size: 14px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E1E6FF;
+            border-radius: 10px;
+            font-size: 15px;
+            outline: none;
+            transition: .25s;
+        }
+
+        .group input:focus {
+            border-color: #4C7EFF;
+            box-shadow: 0 0 0 3px rgba(76,126,255,0.15);
+        }
+
+        .btn-orange {
+            width: 100%;
+            padding: 12px;
+            background: #FF7F3F;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: .25s;
+        }
+
+        .btn-orange:hover {
+            background: #FF9A4D;
+        }
+
+        .social-box {
+            margin-top: 25px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .social-btn {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            margin-top: 12px;
+            cursor: pointer;
+        }
+
+        .google {
+            background: #fff;
+            border: 1px solid #E1E6FF;
+        }
+
+        .kakao {
+            background: #FEE500;
+            border: none;
+        }
+
+        .bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .bottom a {
+            color: #FF7F3F;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-box">
+    <h1>Java Archive</h1>
+    <div class="desc">회원가입 후 서비스를 이용할 수 있어요</div>
+
+    <form id="signupForm">
+        <div class="group">
+            <label>이메일</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="group">
+            <label>비밀번호</label>
+            <input type="password" id="password" required>
+        </div>
+
+        <div class="group">
+            <label>비밀번호 확인</label>
+            <input type="password" id="password2" required>
+        </div>
+
+        <div class="group">
+            <label>닉네임</label>
+            <input type="text" id="nickname" required>
+        </div>
+
+        <button class="btn-orange" type="submit">회원가입</button>
+    </form>
+
+    <div class="social-box">또는 다음 서비스로 가입</div>
+
+    <button class="social-btn google">Google로 계속하기</button>
+    <button class="social-btn kakao">Kakao로 계속하기</button>
+
+    <div class="bottom">
+        이미 계정이 있나요? <a href="./login.html">로그인</a>
+    </div>
+</div>
+
+<script>
+    // 임시 회원가입 (localStorage 기반)
+    document.getElementById("signupForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const email = email.value.trim();
+        const pw = password.value.trim();
+        const pw2 = password2.value.trim();
+        const nick = nickname.value.trim();
+
+        if (pw !== pw2) {
+            alert("비밀번호가 일치하지 않습니다.");
+            return;
+        }
+
+        const user = { email, password: pw, nickname: nick, provider: "local" };
+        localStorage.setItem("javaArchiveUser", JSON.stringify(user));
+
+        alert("회원가입 완료! 이제 로그인하세요.");
+        window.location.href = "./login.html";
+    });
+</script>
+
+</body>
+</html>

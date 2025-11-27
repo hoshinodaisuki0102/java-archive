@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <title>JavaArchive | 강의 선택</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/lessons.css">
+    <link rel="stylesheet" href="/assets/css/playground.css">
+    <link rel="stylesheet" href="/assets/css/course.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <script defer src="assets/js/lessons-list.js"></script>
+    <script defer src="assets/js/auth.js"></script>
+</head>
+<body>
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-mark">{ }</span>
+            <span class="logo-text">JavaArchive</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">홈</a>
+            <a href="lessons.html" class="selected">강의</a>
+            <a href="playground.html">코드 실습</a>
+        </nav>
+    </header>
+
+    <main class="page">
+
+        <!-- 추천 기본기 강의 카드 -->
+        <section class="course-card highlight">
+            <div class="course-info">
+                <span class="tag">추천</span>
+                <h1>기본기 강의</h1>
+                <p>
+                    프로그래밍이 처음인 사람을 위한 <b>완전 기초 코스</b>입니다.<br>
+                    “괄호가 뭐예요?”부터 시작해, 한 줄 한 줄 같이 뜯어봅니다.
+                </p>
+                <div class="progress-row">
+                    <span>총 10강</span>
+                    <span id="basic-progress">진행도 0/10</span>
+                </div>
+            </div>
+            <div class="course-action">
+                <a href="curriculum-basic.html" class="btn primary big">수강하기</a>
+            </div>
+        </section>
+
+        <!-- 준비중 강의 카드들 -->
+        <section class="course-card">
+            <div class="course-info">
+                <span class="tag gray">준비중</span>
+                <h2>응용 자바 프로그래밍</h2>
+                <p>조건문과 반복문을 활용한 실제 프로그램 만들기.</p>
+            </div>
+            <div class="course-action">
+                <button class="btn ghost">준비중</button>
+            </div>
+        </section>
+
+        <section class="course-card">
+            <div class="course-info">
+                <span class="tag gray">준비중</span>
+                <h2>프로젝트 Java 입문</h2>
+                <p>작은 미니 프로젝트(계산기, 미니 게임 등)를 만들어봅니다.</p>
+            </div>
+            <div class="course-action">
+                <button class="btn ghost">준비중</button>
+            </div>
+        </section>
+
+        <section class="course-card">
+            <div class="course-info">
+                <span class="tag gray">준비중</span>
+                <h2>객체지향 개념 한 번에 이해하기</h2>
+                <p>클래스, 객체, 메서드, 필드를 직관적으로 이해할 수 있는 강의.</p>
+            </div>
+            <div class="course-action">
+                <button class="btn ghost">준비중</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        © 2025 JavaArchive
+    </footer>
+
+</div>
+</body>
+</html>

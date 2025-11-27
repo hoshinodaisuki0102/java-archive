@@ -1,0 +1,531 @@
+/* ===========================
+   BUTTONS
+=========================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  gap: 6px;
+  transition: background 0.18s, box-shadow 0.15s, transform 0.06s;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #FF7F3F, #FF9A4D);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(255,127,63,0.45);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(255,127,63,0.6);
+}
+
+.btn.ghost {
+  background: #FFFFFF;
+  border: 1px solid #E0E4FF;
+  color: #444;
+}
+
+.btn.ghost:hover {
+  background: #F4F5FF;
+}
+
+.intro-btn {
+  background: #FFFFFF;
+  border: 1px solid #FF7F3F;
+  color: #FF7F3F;
+}
+
+.intro-btn:hover {
+  background: rgba(255,127,63,0.08);
+}
+
+/* ===================================================
+      LEFT CURRICULUM PANEL ★업그레이드 버전★
+=================================================== */
+
+.side-panel {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 260px;
+  height: calc(100% - 80px);
+  background: #ffffff;
+  padding: 20px 18px;
+  border-right: 1px solid #E1E6FF;
+  box-shadow: 6px 0 18px rgba(0,0,0,0.06);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  transform: translateX(0);
+  transition: transform .28s ease, opacity .25s ease;
+  z-index: 999;
+}
+
+.side-panel.closed {
+  transform: translateX(-240px);
+  opacity: 0.95;
+}
+
+.panel-toggle {
+  position: absolute;
+  top: 20px;
+  right: -22px;
+
+  width: 30px;
+  height: 30px;
+
+  background: linear-gradient(135deg, #FF7F3F, #FF9A4D);
+  border: none;
+  border-radius: 50%;
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform .25s, box-shadow .2s, background .2s;
+}
+
+.panel-toggle:hover {
+  background: linear-gradient(135deg, #FF6A1E, #FF8F3B);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.side-panel.closed .panel-toggle {
+  transform: rotate(180deg);
+}
+
+.curriculum-header h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  color: #333;
+  font-weight: 700;
+}
+
+.curriculum-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.curriculum-list li {
+  margin-bottom: 4px;
+}
+
+.curriculum-list li a {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  color: #444;
+
+  transition: background .15s, color .15s, transform .1s;
+}
+
+.curriculum-list li a span.cur-num {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FF7F3F;
+  margin-right: 6px;
+}
+
+.curriculum-list li a:hover {
+  background: rgba(255,127,63,0.18);
+  color: #FF7F3F;
+  transform: translateX(2px);
+}
+
+/* ===========================
+   AUTH POPUP (JavaArchive)
+   =========================== */
+
+.ja-login-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9990;
+  opacity: 0;
+  animation: jaFadeIn 0.3s forwards;
+}
+
+.ja-login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  max-width: 92%;
+  transform: translate(-50%, -50%) scale(0.85);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  animation: jaPopupIn 0.3s forwards;
+  overflow: hidden;
+  font-family: "Pretendard", system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+.ja-popup-header {
+  padding: 24px 24px 18px;
+  background: linear-gradient(135deg, #FF7F3F, #FF9A4D);
+  color: #fff;
+}
+
+.ja-popup-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.ja-popup-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.ja-popup-body {
+  padding: 22px 22px 20px;
+}
+
+.ja-popup-body input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid #E1E6FF;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.ja-popup-body input:focus {
+  border-color: #4C7EFF;
+  box-shadow: 0 0 0 3px rgba(76,126,255,0.18);
+}
+
+.ja-auto-login {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+#jaLoginBtn,
+#jaSignupBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #FF7F3F;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 4px;
+}
+
+#jaLoginBtn:hover,
+#jaSignupBtn:hover {
+  background: #FF9A4D;
+}
+
+.ja-or {
+  display: flex;
+  align-items: center;
+  margin: 14px 0 10px;
+  font-size: 12px;
+  color: #999;
+  gap: 10px;
+}
+
+.ja-or::before,
+.ja-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #E1E6FF;
+}
+
+.ja-social {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.ja-social-btn {
+  flex: 1;
+  border-radius: 10px;
+  padding: 9px 8px;
+  border: 1px solid #E1E6FF;
+  font-size: 13px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.ja-social-btn.ja-kakao {
+  background: #FEE500;
+  border-color: #FADA0A;
+}
+
+.ja-switch {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+
+.ja-switch button {
+  border: none;
+  background: none;
+  color: #FF7F3F;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* nav 우측 로그인/닉네임 영역 */
+
+.ja-nav-user {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.ja-nav-user-name {
+  font-size: 13px;
+  color: #444;
+}
+
+.ja-nav-user-login,
+.ja-nav-user-logout {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: #FFE9D6;
+  color: #FF7F3F;
+  font-weight: 600;
+}
+
+.ja-nav-user-login:hover,
+.ja-nav-user-logout:hover {
+  background: #FFDFC2;
+}
+
+/* 애니메이션 */
+
+@keyframes jaFadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes jaPopupIn {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* =====================================
+   JavaArchive AUTH POPUP - DETAIL TUNING
+   ===================================== */
+
+/* Overlay */
+.ja-login-overlay {
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.55);
+  z-index: 9990;
+  animation: jaFadeIn 0.25s forwards;
+  opacity: 0;
+}
+
+/* Popup window */
+.ja-login-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  max-width: 92%;
+  transform: translate(-50%, -50%) scale(0.87);
+  background: #fff;
+  border-radius: 20px;
+  padding-bottom: 6px;
+  box-shadow: 0 22px 50px rgba(15,23,42,0.25);
+  z-index: 9999;
+  animation: jaPopupIn 0.25s forwards;
+  opacity: 0;
+}
+
+/* Header */
+.ja-popup-header {
+  padding: 26px 28px 20px;
+  background: linear-gradient(135deg, #FF7F3F, #FF9A4D);
+  color: #fff;
+}
+.ja-popup-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+.ja-popup-header p {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Body */
+.ja-popup-body {
+  padding: 24px 28px 22px;
+}
+
+/* Inputs */
+.ja-popup-body input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  border: 1px solid #E1E6FF;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.ja-popup-body input:focus {
+  border-color: #4C7EFF;
+  box-shadow: 0 0 0 3px rgba(76,126,255,0.18);
+}
+
+/* Auto login */
+.ja-auto-login {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+.ja-auto-login input {
+  vertical-align: middle;
+  transform: translateY(-1px);
+}
+
+/* Main button */
+.ja-btn-main {
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  background: #FF7F3F;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.18s;
+  cursor: pointer;
+}
+.ja-btn-main:hover {
+  background: #FF9A4D;
+  transform: scale(1.02);
+}
+
+/* Divider */
+.ja-or {
+  display: flex;
+  align-items: center;
+  margin: 16px 0 12px;
+  color: #999;
+  font-size: 12px;
+  gap: 10px;
+}
+.ja-or::before,
+.ja-or::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #E1E6FF;
+}
+
+/* Social buttons */
+.ja-social {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.ja-social-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #E1E6FF;
+  background: #fff;
+  font-size: 13px;
+  transition: 0.18s;
+}
+.ja-social-btn:hover {
+  box-shadow: 0 4px 10px rgba(15,23,42,0.12);
+}
+.ja-kakao {
+  background: #FEE500;
+  border-color: #F2D500;
+}
+
+/* Switch */
+.ja-switch {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 13px;
+}
+.ja-switch button {
+  border: none;
+  background: none;
+  color: #FF7F3F;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Navigation right side (header) */
+.ja-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ja-nav-user-login,
+.ja-nav-user-logout {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #FFE9D6;
+  color: #FF7F3F;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: 0.18s;
+  cursor: pointer;
+}
+.ja-nav-user-login:hover,
+.ja-nav-user-logout:hover {
+  background: #FFDFC2;
+}
+
+/* Animations */
+@keyframes jaFadeIn {
+  to { opacity: 1; }
+}
+@keyframes jaPopupIn {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
